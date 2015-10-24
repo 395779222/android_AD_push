@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="280dip"
+   	android:layout_margin="20dp">
+
+	
+	<LinearLayout
+	      android:id="@+id/lin_content"
+	      android:layout_marginLeft="25dp"
+	      android:layout_marginRight="25dp"
+	      android:layout_marginTop="70dp"
+	      android:layout_marginBottom="70dp"
+	      android:layout_width="fill_parent"
+    	  android:layout_height="fill_parent"
+    	  android:background="@drawable/sa_corners_bg">
+    	  
+	    <ImageView
+	      android:id="@+id/image"
+	      android:layout_margin="5dp"
+	      android:layout_width="fill_parent"
+    	  android:layout_height="fill_parent"
+    	  android:src="@drawable/ad4"
+	   />
+	</LinearLayout>
+
+	<ImageView
+	    android:id="@+id/cancle"
+	    android:layout_marginTop="54dp"
+	    android:layout_marginRight="8dp"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:src="@drawable/delete2" />
+	
+</RelativeLayout>

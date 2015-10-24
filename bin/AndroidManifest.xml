@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stargame.ad"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+	<!-- 加入外部activity跳转 -->
+   <uses-permission android:name="android.permission.INTERNET" />
+   <!-- 加入锁屏唤醒权限 ，屏幕点亮权限-->
+   <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>    
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYS" />
+	<!-- 读写内存 -->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.stargame.ad.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+           <activity android:name="com.stargame.ad.activity.DownLodaActivity"
+              android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+        </activity>
+        
+        <activity android:name="com.stargame.ad.activity.LockActivity"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+            
+        </activity>
+         <activity
+             android:name="com.stargame.ad.activity.AdActivity">
+        </activity>
+         
+        <service android:name="com.stargame.ad.service.MyService">
+        </service>
+         <service android:name="com.stargame.ad.service.MyLockService">
+        </service>
+        <service android:name="com.stargame.ad.service.DownLoadTestService">
+        </service>
+    </application>
+
+</manifest>
